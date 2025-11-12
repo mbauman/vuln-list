@@ -1,0 +1,54 @@
+{
+  "id": "JLSEC-2025-173",
+  "modified": "2025-11-06T23:03:50.965725Z",
+  "published": "2025-10-21T14:51:00.329Z",
+  "summary": "libexpat in Expat before 2.7.2 allows attackers to trigger large dynamic memory allocations via a sm...",
+  "details": "libexpat in Expat before 2.7.2 allows attackers to trigger large dynamic memory allocations via a small document that is submitted for parsing.",
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Julia",
+        "name": "Expat_jll",
+        "purl": "pkg:julia/Expat_jll?uuid=2e619515-83b5-522b-bb60-26c02a35a201"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.7.3+0"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "source": "https://github.com/JuliaLang/SecurityAdvisories.jl/tree/generated/osv/2025/JLSEC-2025-173.json"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/libexpat/libexpat/blob/676a4c531ec768732fac215da9730b5f50fbd2bf/expat/Changes#L45-L74"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/libexpat/libexpat/blob/R_2_7_2/expat/Changes"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/libexpat/libexpat/issues/1018"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/libexpat/libexpat/pull/1034"
+    },
+    {
+      "type": "WEB",
+      "url": "https://issues.oss-fuzz.com/issues/439133977"
+    }
+  ]
+}

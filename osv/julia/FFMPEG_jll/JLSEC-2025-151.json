@@ -1,0 +1,81 @@
+{
+  "id": "JLSEC-2025-151",
+  "modified": "2025-11-06T23:03:44.832590Z",
+  "published": "2025-10-19T19:08:53.760Z",
+  "summary": "A vulnerability, which was classified as critical, was found in FFmpeg up to 7.1",
+  "details": "A vulnerability, which was classified as critical, was found in FFmpeg up to 7.1. This affects the function ff_aac_search_for_tns of the file libavcodec/aacenc_tns.c of the component AAC Encoder. The manipulation leads to stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used.",
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Julia",
+        "name": "FFMPEG_jll",
+        "purl": "pkg:julia/FFMPEG_jll?uuid=b22a6f82-2f65-5046-a5b2-351ab43fb4e5"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.1.1+0"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "source": "https://github.com/JuliaLang/SecurityAdvisories.jl/tree/generated/osv/2025/JLSEC-2025-151.json"
+      }
+    },
+    {
+      "package": {
+        "ecosystem": "Julia",
+        "name": "FFplay_jll",
+        "purl": "pkg:julia/FFplay_jll?uuid=c4dce911-e170-5107-8314-c7bdc6785395"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.1.1+0"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "source": "https://github.com/JuliaLang/SecurityAdvisories.jl/tree/generated/osv/2025/JLSEC-2025-151.json"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://ffmpeg.org/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://trac.ffmpeg.org/attachment/ticket/11418/poc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://trac.ffmpeg.org/ticket/11418#comment:3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.296589"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.296589"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.496929"
+    }
+  ]
+}

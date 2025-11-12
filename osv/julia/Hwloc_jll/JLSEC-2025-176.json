@@ -1,0 +1,38 @@
+{
+  "id": "JLSEC-2025-176",
+  "modified": "2025-11-06T23:03:13.733292Z",
+  "published": "2025-10-21T17:35:18.006Z",
+  "summary": "An issue was discovered in open-mpi hwloc 2.1.0 allows attackers to cause a denial of service or oth...",
+  "details": "An issue was discovered in open-mpi hwloc 2.1.0 allows attackers to cause a denial of service or other unspecified impacts via glibc-cpuset in topology-linux.c.",
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Julia",
+        "name": "Hwloc_jll",
+        "purl": "pkg:julia/Hwloc_jll?uuid=e33a78d0-f292-5ffc-b300-72abe9b543c8"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.9.3+0"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "source": "https://github.com/JuliaLang/SecurityAdvisories.jl/tree/generated/osv/2025/JLSEC-2025-176.json"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/open-mpi/hwloc/issues/544"
+    }
+  ]
+}
