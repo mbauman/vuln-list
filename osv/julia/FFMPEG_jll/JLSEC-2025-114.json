@@ -1,0 +1,42 @@
+{
+  "id": "JLSEC-2025-114",
+  "modified": "2025-11-06T23:02:50.292466Z",
+  "published": "2025-10-19T19:08:53.760Z",
+  "summary": "dwa_uncompress in libavcodec/exr.c in FFmpeg 4.4 allows an out-of-bounds array access because dc_cou...",
+  "details": "dwa_uncompress in libavcodec/exr.c in FFmpeg 4.4 allows an out-of-bounds array access because dc_count is not strictly checked.",
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Julia",
+        "name": "FFMPEG_jll",
+        "purl": "pkg:julia/FFMPEG_jll?uuid=b22a6f82-2f65-5046-a5b2-351ab43fb4e5"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.4.0+0"
+            },
+            {
+              "fixed": "4.4.2+0"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "source": "https://github.com/JuliaLang/SecurityAdvisories.jl/tree/generated/osv/2025/JLSEC-2025-114.json"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/FFmpeg/FFmpeg/commit/26d3c81bc5ef2f8c3f09d45eaeacfb4b1139a777"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202312-14"
+    }
+  ]
+}

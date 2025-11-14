@@ -1,0 +1,46 @@
+{
+  "id": "JLSEC-2025-137",
+  "modified": "2025-11-06T23:03:37.319758Z",
+  "published": "2025-10-19T19:08:53.760Z",
+  "summary": "FFmpeg n6.1.1 has a vulnerability in the AVI demuxer of the libavformat library which allows for an ...",
+  "details": "FFmpeg n6.1.1 has a vulnerability in the AVI demuxer of the libavformat library which allows for an integer overflow, potentially resulting in a denial-of-service (DoS) condition.",
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Julia",
+        "name": "FFMPEG_jll",
+        "purl": "pkg:julia/FFMPEG_jll?uuid=b22a6f82-2f65-5046-a5b2-351ab43fb4e5"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.1.1+0"
+            },
+            {
+              "fixed": "6.1.2+0"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "source": "https://github.com/JuliaLang/SecurityAdvisories.jl/tree/generated/osv/2025/JLSEC-2025-137.json"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/1047524396/a148f3679415a6da53ca112eb2ba1523"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/FFmpeg/FFmpeg/blob/n6.1.1/libavformat/avidec.c#L1699"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/ffmpeg/ffmpeg/commit/7a089ed8e049e3bfcb22de1250b86f2106060857"
+    }
+  ]
+}

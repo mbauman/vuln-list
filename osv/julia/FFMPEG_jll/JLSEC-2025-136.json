@@ -1,0 +1,46 @@
+{
+  "id": "JLSEC-2025-136",
+  "modified": "2025-11-06T23:03:35.447161Z",
+  "published": "2025-10-19T19:08:53.760Z",
+  "summary": "In FFmpeg version n6.1.1, specifically within the avcodec/speexdec.c module, a potential security vu...",
+  "details": "In FFmpeg version n6.1.1, specifically within the avcodec/speexdec.c module, a potential security vulnerability exists due to insufficient validation of certain parameters when parsing Speex codec extradata. This vulnerability could lead to integer overflow conditions, potentially resulting in undefined behavior or crashes during the decoding process.",
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Julia",
+        "name": "FFMPEG_jll",
+        "purl": "pkg:julia/FFMPEG_jll?uuid=b22a6f82-2f65-5046-a5b2-351ab43fb4e5"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.1.1+0"
+            },
+            {
+              "fixed": "6.1.2+0"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "source": "https://github.com/JuliaLang/SecurityAdvisories.jl/tree/generated/osv/2025/JLSEC-2025-136.json"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/1047524396/455093807666f2e351d674750c8cd0b8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/FFmpeg/FFmpeg/blob/n6.1.1/libavcodec/speexdec.c#L1423"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/ffmpeg/ffmpeg/commit/0895ef0d6d6406ee6cd158fc4d47d80f201b8e9c"
+    }
+  ]
+}

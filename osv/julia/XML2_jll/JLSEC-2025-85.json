@@ -1,0 +1,42 @@
+{
+  "id": "JLSEC-2025-85",
+  "modified": "2025-11-06T23:03:14.640821Z",
+  "published": "2025-10-17T17:40:51.659Z",
+  "summary": "xmlXIncludeAddNode in xinclude.c in libxml2 before 2.11.0 has a use-after-free.",
+  "details": "xmlXIncludeAddNode in xinclude.c in libxml2 before 2.11.0 has a use-after-free.",
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Julia",
+        "name": "XML2_jll",
+        "purl": "pkg:julia/XML2_jll?uuid=02c8fc9c-b97f-50b9-bbe4-9be30ff0a78a"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.12.0+0"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "source": "https://github.com/JuliaLang/SecurityAdvisories.jl/tree/generated/osv/2025/JLSEC-2025-85.json"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/php/php-src/issues/17467"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.gnome.org/GNOME/libxml2/-/commit/5a19e21605398cef6a8b1452477a8705cb41562b"
+    }
+  ]
+}

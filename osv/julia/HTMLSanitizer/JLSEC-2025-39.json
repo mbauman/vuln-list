@@ -1,0 +1,36 @@
+{
+  "id": "JLSEC-2025-39",
+  "modified": "2025-11-06T22:57:20.879752Z",
+  "published": "2025-10-14T04:37:19.606Z",
+  "aliases": [
+    "CVE-2025-52561",
+    "GHSA-3mj7-qxh9-6q4p"
+  ],
+  "summary": "Possible XSS in HTMLSanitizer when using svg elements",
+  "details": "### Description\n\nWhen adding the style tag to the whitelist, content inside the tag is incorrectly unescaped, and closing tags injected as content are interpreted as real HTML, enabling tag injection and JavaScript execution.\n\nThis behavior is similar to the sanitization bypass described in CVE-2020-4054 (Sanitize for Ruby).\n\n```\nusing HTMLSanitizer\n\nuser_input = \"\u003csvg\u003e\u003cstyle\u003e\u0026lt;/style\u003e\u0026lt;img src onerror=alert(1)\u003e\"\n\nwhitelist = deepcopy(HTMLSanitizer.WHITELIST)\nappend!(whitelist[:elements], [\"style\"])\nresult = sanitize(user_input, whitelist=whitelist)\nprint(result) # \u003cstyle\u003e\u003c/style\u003e\u003cimg src onerror=alert(1)\u003e\u003c/style\u003e\n```\n\n### Impact\n\nPossible XSS in any HTML that is sanitized with this library.\n\n### Patches\n\nUsers should upgrade to `v0.2.1` as soon as possible. In this version, `svg` and `math` tags are removed by default.\n\n### Workarounds\n\nAdd the `math` and `svg` elements to your whitelist manually via e.g.\n\n```\nwhitelist = deepcopy(HTMLSanitizer.WHITELIST)\nappend!(whitelist[:removed_elements], [\"math\", \"svg\"])\n```\n\nand pass this modified whitelist to `sanitize`:\n\n```\nsanitize(user_input, whitelist=whitelist)\n```\n\n### References\n\n[PR for fix](https://github.com/JuliaComputing/HTMLSanitizer.jl/pull/5)\n\n### Credits\n\nThanks to  Chen T for finding and reporting this issue.",
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Julia",
+        "name": "HTMLSanitizer",
+        "purl": "pkg:julia/HTMLSanitizer?uuid=9a15a9f4-ddd5-46ee-89fc-c219f813dd6f"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.2.1"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "source": "https://github.com/JuliaLang/SecurityAdvisories.jl/tree/generated/osv/2025/JLSEC-2025-39.json"
+      }
+    }
+  ]
+}

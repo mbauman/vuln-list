@@ -1,0 +1,42 @@
+{
+  "id": "JLSEC-2025-177",
+  "modified": "2025-11-06T23:02:28.092072Z",
+  "published": "2025-10-21T17:39:06.495Z",
+  "summary": "libjpeg-turbo 2.0.1 has a heap-based buffer over-read in the put_pixel_rows function in wrbmp.c, as ...",
+  "details": "libjpeg-turbo 2.0.1 has a heap-based buffer over-read in the put_pixel_rows function in wrbmp.c, as demonstrated by djpeg.",
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Julia",
+        "name": "JpegTurbo_jll",
+        "purl": "pkg:julia/JpegTurbo_jll?uuid=aacddb02-875f-59d6-b918-886e6ef4fbf8"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.1.0+0"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "source": "https://github.com/JuliaLang/SecurityAdvisories.jl/tree/generated/osv/2025/JLSEC-2025-177.json"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/libjpeg-turbo/libjpeg-turbo/issues/305"
+    },
+    {
+      "type": "WEB",
+      "url": "https://usn.ubuntu.com/4190-1/"
+    }
+  ]
+}

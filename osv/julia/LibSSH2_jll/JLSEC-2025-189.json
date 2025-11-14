@@ -1,0 +1,46 @@
+{
+  "id": "JLSEC-2025-189",
+  "modified": "2025-11-06T23:02:40.859121Z",
+  "published": "2025-10-27T15:45:54.694Z",
+  "summary": "An issue was discovered in function _libssh2_packet_add in libssh2 1.10.0 allows attackers to access...",
+  "details": "An issue was discovered in function _libssh2_packet_add in libssh2 1.10.0 allows attackers to access out of bounds memory.",
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Julia",
+        "name": "LibSSH2_jll",
+        "purl": "pkg:julia/LibSSH2_jll?uuid=29816b5a-b9ab-546f-933c-edad1886dfa8"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.10.1+0"
+            },
+            {
+              "fixed": "1.11.0+0"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "source": "https://github.com/JuliaLang/SecurityAdvisories.jl/tree/generated/osv/2025/JLSEC-2025-189.json"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/libssh2/libssh2/pull/476"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2023/09/msg00006.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20231006-0002/"
+    }
+  ]
+}

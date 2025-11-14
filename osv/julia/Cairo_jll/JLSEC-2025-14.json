@@ -1,0 +1,42 @@
+{
+  "id": "JLSEC-2025-14",
+  "modified": "2025-11-06T23:02:28.615696Z",
+  "published": "2025-10-10T13:22:08.213Z",
+  "summary": "cairo 1.16.0, in cairo_ft_apply_variations() in cairo-ft-font.c, would free memory using a free func...",
+  "details": "cairo 1.16.0, in cairo_ft_apply_variations() in cairo-ft-font.c, would free memory using a free function incompatible with WebKit's fastMalloc, leading to an application crash with a \"free(): invalid pointer\" error.",
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Julia",
+        "name": "Cairo_jll",
+        "purl": "pkg:julia/Cairo_jll?uuid=83423d85-b0ee-5818-9007-b63ccbeb887a"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.16.0+0"
+            },
+            {
+              "fixed": "1.18.0+0"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "source": "https://github.com/JuliaLang/SecurityAdvisories.jl/tree/generated/osv/2025/JLSEC-2025-14.json"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://bugs.webkit.org/show_bug.cgi?id=191595"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.freedesktop.org/cairo/cairo/merge_requests/5"
+    }
+  ]
+}

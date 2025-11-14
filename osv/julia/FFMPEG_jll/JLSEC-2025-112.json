@@ -1,0 +1,50 @@
+{
+  "id": "JLSEC-2025-112",
+  "modified": "2025-11-06T23:02:49.338249Z",
+  "published": "2025-10-19T19:08:53.760Z",
+  "summary": "FFmpeg \u003c=4.3 contains a buffer overflow vulnerability in libavcodec through a crafted file that may ...",
+  "details": "FFmpeg \u003c=4.3 contains a buffer overflow vulnerability in libavcodec through a crafted file that may lead to remote code execution.",
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Julia",
+        "name": "FFMPEG_jll",
+        "purl": "pkg:julia/FFMPEG_jll?uuid=b22a6f82-2f65-5046-a5b2-351ab43fb4e5"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.4.0+0"
+            },
+            {
+              "fixed": "4.4.2+0"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "source": "https://github.com/JuliaLang/SecurityAdvisories.jl/tree/generated/osv/2025/JLSEC-2025-112.json"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://git.videolan.org/?p=ffmpeg.git%3Ba=commitdiff%3Bh=d6f293353c94c7ce200f6e0975ae3de49787f91f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202105-24"
+    },
+    {
+      "type": "WEB",
+      "url": "https://trac.ffmpeg.org/ticket/8845"
+    },
+    {
+      "type": "WEB",
+      "url": "https://trac.ffmpeg.org/ticket/8863"
+    }
+  ]
+}

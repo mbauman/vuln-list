@@ -1,0 +1,46 @@
+{
+  "id": "JLSEC-2025-32",
+  "modified": "2025-11-06T23:03:16.902091Z",
+  "published": "2025-10-10T15:04:01.319Z",
+  "summary": "A double free vulnerability exists in libcurl \u003c8.0.0 when sharing HSTS data between separate \"handle...",
+  "details": "A double free vulnerability exists in libcurl \u003c8.0.0 when sharing HSTS data between separate \"handles\". This sharing was introduced without considerations for do this sharing across separate threads but there was no indication of this fact in the documentation. Due to missing mutexes or thread locks, two threads sharing the same HSTS data could end up doing a double-free or use-after-free.",
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Julia",
+        "name": "LibCURL_jll",
+        "purl": "pkg:julia/LibCURL_jll?uuid=deac9b47-8bc7-5906-a0fe-35ac56dc84c0"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.88.1+0"
+            },
+            {
+              "fixed": "8.0.1+0"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "source": "https://github.com/JuliaLang/SecurityAdvisories.jl/tree/generated/osv/2025/JLSEC-2025-32.json"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1897203"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202310-12"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20230420-0010/"
+    }
+  ]
+}
